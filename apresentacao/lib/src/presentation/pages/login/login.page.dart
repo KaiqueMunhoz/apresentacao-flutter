@@ -1,7 +1,4 @@
 import 'package:apresentacao/src/presentation/pages/login/widgets/teddy_bear.widget.dart';
-import 'package:flare_flutter/flare_actor.dart';
-import 'package:flare_flutter/flare_controller.dart';
-import 'package:flare_flutter/flare_controls.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
