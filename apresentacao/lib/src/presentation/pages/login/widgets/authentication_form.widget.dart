@@ -1,3 +1,4 @@
+import 'package:apresentacao/src/presentation/pages/login/widgets/custom_text_form_field.widget.dart';
 import 'package:flutter/material.dart';
 
 class AuthenticationForm extends StatelessWidget {
@@ -6,7 +7,9 @@ class AuthenticationForm extends StatelessWidget {
   static const double _formBorder = 25.0;
   static const double _formPadding = 30.0;
   static const double _spaceBetweenTexts = 30.0;
-  static const Color _textFormFieldColor = Color(0xFF5d8e9b);
+
+  static const String _labelYourName = 'Digite seu nome';
+  static const String _labelYourPassword = 'Digite sua senha';
 
   const AuthenticationForm({Key? key}) : super(key: key);
 
@@ -25,29 +28,10 @@ class AuthenticationForm extends StatelessWidget {
         padding: const EdgeInsets.all(_formPadding),
         child: Form(
           child: Column(
-            children: <Widget>[
-              TextFormField(
-                cursorColor: _textFormFieldColor,
-                decoration: const InputDecoration(
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: _textFormFieldColor),
-                  ),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: _textFormFieldColor),
-                  ),
-                  labelText: 'Digite seu nome',
-                  labelStyle: TextStyle(
-                    color: _textFormFieldColor,
-                  ),
-                ),
-              ),
-              const SizedBox(height: _spaceBetweenTexts),
-              TextFormField(
-                decoration: const InputDecoration(
-                  border: UnderlineInputBorder(),
-                  labelText: 'Digite sua senha',
-                ),
-              ),
+            children: const <Widget>[
+              CustomTextFormField(labelText: _labelYourName),
+              SizedBox(height: _spaceBetweenTexts),
+              CustomTextFormField(labelText: _labelYourPassword),
             ],
           ),
         ),
