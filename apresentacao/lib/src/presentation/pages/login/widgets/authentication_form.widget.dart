@@ -6,6 +6,7 @@ class AuthenticationForm extends StatelessWidget {
   static const double _formBorder = 25.0;
   static const double _formPadding = 30.0;
   static const double _spaceBetweenTexts = 30.0;
+  static const Color _textFormFieldColor = Color(0xFF5d8e9b);
 
   const AuthenticationForm({Key? key}) : super(key: key);
 
@@ -26,9 +27,18 @@ class AuthenticationForm extends StatelessWidget {
           child: Column(
             children: <Widget>[
               TextFormField(
+                cursorColor: _textFormFieldColor,
                 decoration: const InputDecoration(
-                  border: UnderlineInputBorder(),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: _textFormFieldColor),
+                  ),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: _textFormFieldColor),
+                  ),
                   labelText: 'Digite seu nome',
+                  labelStyle: TextStyle(
+                    color: _textFormFieldColor,
+                  ),
                 ),
               ),
               const SizedBox(height: _spaceBetweenTexts),
