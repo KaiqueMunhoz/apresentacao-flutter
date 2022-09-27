@@ -9,7 +9,6 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    FlareController _teddyController = FlareControls();
     EdgeInsets devicePadding = MediaQuery.of(context).padding;
 
     return Scaffold(
