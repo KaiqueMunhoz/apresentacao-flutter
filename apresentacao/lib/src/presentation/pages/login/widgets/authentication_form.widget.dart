@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AuthenticationForm extends StatelessWidget {
+  static const double _formHeight = 200.0;
   static const double _formWidth = 300.0;
   static const double _formBorder = 25.0;
   static const double _formPadding = 30.0;
@@ -10,6 +11,7 @@ class AuthenticationForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: _formHeight,
       width: _formWidth,
       decoration: const BoxDecoration(
         color: Colors.white,
