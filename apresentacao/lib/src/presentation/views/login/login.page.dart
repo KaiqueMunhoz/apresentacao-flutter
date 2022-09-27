@@ -10,15 +10,19 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     FlareController _teddyController = FlareControls();
 
-    return Container(
-      height: 200,
-      padding: const EdgeInsets.symmetric(horizontal: 30.0),
-      child: FlareActor(
-        "assets/Teddy.flr",
-        shouldClip: false,
-        alignment: Alignment.bottomCenter,
-        fit: BoxFit.contain,
-        controller: _teddyController,
+    return Scaffold(
+      body: Center(
+        child: Container(
+          height: 200,
+          padding: const EdgeInsets.symmetric(horizontal: 30.0),
+          child: FlareActor(
+            "assets/Teddy.flr",
+            shouldClip: false,
+            alignment: Alignment.bottomCenter,
+            fit: BoxFit.contain,
+            controller: _teddyController,
+          ),
+        ),
       ),
     );
   }
