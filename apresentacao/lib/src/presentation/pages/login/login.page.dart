@@ -7,9 +7,10 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     EdgeInsets devicePadding = MediaQuery.of(context).padding;
+    const Color _backgroundColor = Color(0xFF5d8e9b);
 
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(93, 142, 155, 1.0),
+      backgroundColor: _backgroundColor,
       body: SingleChildScrollView(
         padding: EdgeInsets.only(
           left: 20.0,
