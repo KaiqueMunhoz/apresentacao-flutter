@@ -5,6 +5,7 @@ class AuthenticationForm extends StatelessWidget {
   static const double _formWidth = 300.0;
   static const double _formBorder = 25.0;
   static const double _formPadding = 30.0;
+  static const double _spaceBetweenTexts = 30.0;
 
   const AuthenticationForm({Key? key}) : super(key: key);
 
@@ -19,8 +20,17 @@ class AuthenticationForm extends StatelessWidget {
           Radius.circular(_formBorder),
         ),
       ),
-      child: const Padding(
-        padding: EdgeInsets.all(_formPadding),
+      child: Padding(
+        padding: const EdgeInsets.all(_formPadding),
+        child: Form(
+          child: Column(
+            children: <Widget>[
+              TextFormField(),
+              const SizedBox(height: _spaceBetweenTexts),
+              TextFormField(),
+            ],
+          ),
+        ),
       ),
     );
   }
