@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'flutter_basics.routes.dart';
+
 class FlutterBasicsApp extends StatelessWidget {
   static const String appTitle = "Apresentação: Flutter Básico";
 
@@ -12,7 +14,8 @@ class FlutterBasicsApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Container(),
+      initialRoute: FlutterBasicsRoutes.initialRoute,
+      routes: FlutterBasicsRoutes.routes,
     );
   }
 }
