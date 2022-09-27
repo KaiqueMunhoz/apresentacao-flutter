@@ -1,3 +1,6 @@
+import 'package:flare_flutter/flare_actor.dart';
+import 'package:flare_flutter/flare_controller.dart';
+import 'package:flare_flutter/flare_controls.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
@@ -5,6 +8,18 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    FlareController _teddyController = FlareControls();
+
+    return Container(
+      height: 200,
+      padding: const EdgeInsets.symmetric(horizontal: 30.0),
+      child: FlareActor(
+        "assets/Teddy.flr",
+        shouldClip: false,
+        alignment: Alignment.bottomCenter,
+        fit: BoxFit.contain,
+        controller: _teddyController,
+      ),
+    );
   }
 }
