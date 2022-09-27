@@ -1,3 +1,4 @@
+import 'package:apresentacao/src/presentation/pages/login/widgets/teddy_bear.widget.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flare_flutter/flare_controller.dart';
 import 'package:flare_flutter/flare_controls.dart';
@@ -21,17 +22,7 @@ class Login extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Container(
-              height: 200,
-              padding: const EdgeInsets.symmetric(horizontal: 30.0),
-              child: FlareActor(
-                "assets/Teddy.flr",
-                shouldClip: false,
-                alignment: Alignment.bottomCenter,
-                fit: BoxFit.contain,
-                controller: _teddyController,
-              ),
-            ),
+            const TeddyBear(),
             Container(
               width: 200,
               decoration: const BoxDecoration(
