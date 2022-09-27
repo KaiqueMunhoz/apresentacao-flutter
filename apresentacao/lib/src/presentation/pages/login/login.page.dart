@@ -8,13 +8,14 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     EdgeInsets devicePadding = MediaQuery.of(context).padding;
     const Color _backgroundColor = Color(0xFF5d8e9b);
+    const double _paddingHorizontal = 20.0;
 
     return Scaffold(
       backgroundColor: _backgroundColor,
       body: SingleChildScrollView(
         padding: EdgeInsets.only(
-          left: 20.0,
-          right: 20.0,
+          left: _paddingHorizontal,
+          right: _paddingHorizontal,
           top: devicePadding.top + 50.0,
         ),
         child: Column(
