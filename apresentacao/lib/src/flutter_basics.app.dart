@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 
-class FlutterBasics extends StatelessWidget {
+class FlutterBasicsApp extends StatelessWidget {
   static const String appTitle = "Apresentação: Flutter Básico";
-  final Widget child;
 
-  const FlutterBasics({
-    Key? key,
-    required this.child,
-  }) : super(key: key);
+  const FlutterBasicsApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +12,7 @@ class FlutterBasics extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: child,
+      home: Container(),
     );
   }
 }
