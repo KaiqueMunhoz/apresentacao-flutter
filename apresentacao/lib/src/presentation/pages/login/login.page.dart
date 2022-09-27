@@ -6,9 +6,10 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    EdgeInsets devicePadding = MediaQuery.of(context).padding;
     const Color _backgroundColor = Color(0xFF5d8e9b);
     const double _paddingHorizontal = 20.0;
+
+    final double _paddingTop = _getPaddingTop(context);
 
     return Scaffold(
       backgroundColor: _backgroundColor,
@@ -16,7 +17,7 @@ class Login extends StatelessWidget {
         padding: EdgeInsets.only(
           left: _paddingHorizontal,
           right: _paddingHorizontal,
-          top: devicePadding.top + 50.0,
+          top: _paddingTop,
         ),
         child: Column(
           children: [
@@ -37,5 +38,12 @@ class Login extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  double _getPaddingTop(BuildContext context) {
+    EdgeInsets _devicePadding = MediaQuery.of(context).padding;
+    const double _appBarHeight = 50.0;
+
+    return _devicePadding.top + _appBarHeight;
   }
 }
