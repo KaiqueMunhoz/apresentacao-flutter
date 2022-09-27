@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AuthenticationForm extends StatelessWidget {
-  static const double _formHeight = 200.0;
+  static const double _formHeight = 225.0;
   static const double _formWidth = 300.0;
   static const double _formBorder = 25.0;
   static const double _formPadding = 30.0;
@@ -25,9 +25,19 @@ class AuthenticationForm extends StatelessWidget {
         child: Form(
           child: Column(
             children: <Widget>[
-              TextFormField(),
+              TextFormField(
+                decoration: const InputDecoration(
+                  border: UnderlineInputBorder(),
+                  labelText: 'Digite seu nome',
+                ),
+              ),
               const SizedBox(height: _spaceBetweenTexts),
-              TextFormField(),
+              TextFormField(
+                decoration: const InputDecoration(
+                  border: UnderlineInputBorder(),
+                  labelText: 'Digite sua senha',
+                ),
+              ),
             ],
           ),
         ),
