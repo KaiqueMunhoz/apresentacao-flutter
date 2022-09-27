@@ -5,12 +5,14 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  static const String appTitle = "Apresentação: Flutter Básico";
+
   const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: appTitle,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
