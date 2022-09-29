@@ -4,13 +4,15 @@ import 'package:flutter/material.dart';
 
 class TeddyBear extends StatelessWidget {
   static const String teddyBearAsset = 'assets/Teddy.flr';
+  final TeddyBearController controller;
 
-  const TeddyBear({Key? key}) : super(key: key);
+  const TeddyBear({
+    Key? key,
+    required this.controller,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    TeddyBearController _controller = TeddyBearController();
-
     return Container(
       height: 200,
       padding: const EdgeInsets.symmetric(horizontal: 30.0),
@@ -19,7 +21,7 @@ class TeddyBear extends StatelessWidget {
         shouldClip: false,
         alignment: Alignment.bottomCenter,
         fit: BoxFit.contain,
-        controller: _controller,
+        controller: controller,
       ),
     );
   }
