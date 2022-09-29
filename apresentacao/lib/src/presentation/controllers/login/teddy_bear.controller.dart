@@ -129,8 +129,8 @@ class TeddyBearController extends FlareControls {
   }
 
   void submitPassword(String password) {
-    if (!_isCoveringEyes) {
-      play(TeddyBearGesturesConstants.handsUp);
+    if (_isCoveringEyes) {
+      play(TeddyBearGesturesConstants.handsDown);
     }
     if (password.toLowerCase() == "flutter") {
       play(TeddyBearGesturesConstants.success);
