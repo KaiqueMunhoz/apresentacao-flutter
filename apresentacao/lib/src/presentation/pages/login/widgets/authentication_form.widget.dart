@@ -45,9 +45,12 @@ class AuthenticationForm extends StatelessWidget {
                 },
               ),
               const SizedBox(height: _spaceBetweenTexts),
-              const TrackingTextInput(
+              TrackingTextInput(
                 label: _labelYourPassword,
                 hint: _hintPassword,
+                onCaretMoved: (Offset caret) {
+                  teddyBearController.lookAt(caret);
+                },
                 isObscured: true,
               ),
             ],
