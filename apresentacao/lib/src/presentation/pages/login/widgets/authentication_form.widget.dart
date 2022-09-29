@@ -59,7 +59,7 @@ class AuthenticationForm extends StatelessWidget {
               ),
               const SizedBox(height: _spaceBetweenWidgets),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () => teddyBearController.submitPassword(),
                 child: const Text(
                   _buttonText,
                 ),
