@@ -14,6 +14,7 @@ class AuthenticationForm extends StatelessWidget {
   static const String _labelYourPassword = 'Digite sua senha';
   static const String _hintPassword = 'É uma comunidade';
   static const String _buttonText = 'COMEÇAR APRESENTAÇÃO';
+  static const Color _buttonBackgroundColor = Color(0xFF5d8e9b);
 
   final TeddyBearController teddyBearController;
 
@@ -57,9 +58,15 @@ class AuthenticationForm extends StatelessWidget {
                 isObscured: true,
               ),
               const SizedBox(height: _spaceBetweenWidgets),
-              TextButton(
+              ElevatedButton(
                 onPressed: () {},
-                child: const Text(_buttonText),
+                child: const Text(
+                  _buttonText,
+                ),
+                style: ElevatedButton.styleFrom(
+                  primary: _buttonBackgroundColor,
+                  onPrimary: Colors.white,
+                ),
               ),
             ],
           ),
