@@ -104,7 +104,7 @@ class TeddyController extends FlareControls {
 
   // Transform the [Offset] into a [Vec2D].
   // If no caret is provided, lower the [_hasFocus] flag.
-  void lookAt(Offset caret) {
+  void lookAt(Offset? caret) {
     if (caret == null) {
       _hasFocus = false;
       return;
