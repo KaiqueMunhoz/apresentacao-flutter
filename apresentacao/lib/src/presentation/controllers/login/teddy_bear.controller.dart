@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'dart:ui';
 
+import 'package:apresentacao/src/presentation/constants/teddy_bear_gestures.constants.dart';
 import 'package:flare_flutter/flare.dart';
 import 'package:flare_flutter/flare_controls.dart';
 
@@ -87,12 +88,12 @@ class TeddyBearController extends FlareControls {
       _faceControl.getWorldTranslation(_faceOrigin);
       Vec2D.copy(_faceOriginLocal, _faceControl.translation);
     }
-    play("idle");
+    play(TeddyBearGesturesConstants.idle);
   }
 
   @override
   onCompleted(String name) {
-    play("idle");
+    play(TeddyBearGesturesConstants.idle);
   }
 
   // Called by [FlareActor] when the view transform changes.
@@ -125,18 +126,18 @@ class TeddyBearController extends FlareControls {
     }
     _isCoveringEyes = cover;
     if (cover) {
-      play("hands_up");
+      play(TeddyBearGesturesConstants.handsUp);
     } else {
-      play("hands_down");
+      play(TeddyBearGesturesConstants.handsDown);
     }
   }
 
   void submitPassword() {
-    play("hands_up");
+    play(TeddyBearGesturesConstants.handsUp);
     if (_password == "bears") {
-      play("success");
+      play(TeddyBearGesturesConstants.success);
     } else {
-      play("fail");
+      play(TeddyBearGesturesConstants.fail);
     }
   }
 }
