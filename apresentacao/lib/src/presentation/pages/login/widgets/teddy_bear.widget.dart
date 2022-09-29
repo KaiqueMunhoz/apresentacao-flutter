@@ -1,6 +1,5 @@
+import 'package:apresentacao/src/presentation/controllers/login/teddy_bear.controller.dart';
 import 'package:flare_flutter/flare_actor.dart';
-import 'package:flare_flutter/flare_controller.dart';
-import 'package:flare_flutter/flare_controls.dart';
 import 'package:flutter/material.dart';
 
 class TeddyBear extends StatelessWidget {
@@ -10,7 +9,7 @@ class TeddyBear extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    FlareController _teddyController = FlareControls();
+    TeddyBearController _teddyController = TeddyBearController();
 
     return Container(
       height: 200,
