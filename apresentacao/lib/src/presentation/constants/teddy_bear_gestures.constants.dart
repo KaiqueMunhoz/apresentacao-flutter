@@ -1,4 +1,5 @@
 class TeddyBearGesturesConstants {
+  static const String ctrlFace = 'ctrl_face';
   static const String fail = 'fail';
   static const String handsDown = 'hands_down';
   static const String handsUp = 'hands_up';

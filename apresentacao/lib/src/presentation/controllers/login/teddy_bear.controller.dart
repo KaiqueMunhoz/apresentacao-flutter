@@ -82,7 +82,8 @@ class TeddyBearController extends FlareControls {
   @override
   void initialize(FlutterActorArtboard artboard) {
     super.initialize(artboard);
-    final ActorNode? _ctrlFace = artboard.getNode("ctrl_face");
+    final ActorNode? _ctrlFace =
+        artboard.getNode(TeddyBearGesturesConstants.ctrlFace);
     if (_ctrlFace != null) {
       _faceControl = _ctrlFace;
       _faceControl.getWorldTranslation(_faceOrigin);
