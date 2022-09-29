@@ -1,4 +1,4 @@
-import 'package:apresentacao/src/presentation/pages/login/widgets/custom_text_form_field.widget.dart';
+import 'package:apresentacao/src/presentation/pages/login/widgets/tracking_text_input.widget.dart';
 import 'package:flutter/material.dart';
 
 class AuthenticationForm extends StatelessWidget {
@@ -9,7 +9,9 @@ class AuthenticationForm extends StatelessWidget {
   static const double _spaceBetweenTexts = 30.0;
 
   static const String _labelYourName = 'Digite seu nome';
+  static const String _hintName = 'Exemplo: Maria';
   static const String _labelYourPassword = 'Digite sua senha';
+  static const String _hintPassword = 'É uma comunidade';
 
   const AuthenticationForm({Key? key}) : super(key: key);
 
@@ -29,9 +31,15 @@ class AuthenticationForm extends StatelessWidget {
         child: Form(
           child: Column(
             children: const <Widget>[
-              CustomTextFormField(labelText: _labelYourName),
+              TrackingTextInput(
+                label: _labelYourName,
+                hint: _hintName,
+              ),
               SizedBox(height: _spaceBetweenTexts),
-              CustomTextFormField(labelText: _labelYourPassword),
+              TrackingTextInput(
+                label: _labelYourPassword,
+                hint: _hintPassword,
+              ),
             ],
           ),
         ),

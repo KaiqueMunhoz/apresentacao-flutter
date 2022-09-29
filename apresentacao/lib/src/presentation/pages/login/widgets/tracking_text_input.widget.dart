@@ -64,6 +64,7 @@ class _TrackingTextInputState extends State<TrackingTextInput> {
     return CustomTextFormField(
       key: _fieldKey,
       labelText: widget.label,
+      hintText: widget.hint,
       controller: _textController,
       obscureText: widget.isObscured,
     );
