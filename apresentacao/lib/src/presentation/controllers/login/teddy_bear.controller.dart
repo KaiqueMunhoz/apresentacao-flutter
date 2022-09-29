@@ -27,7 +27,6 @@ class TeddyBearController extends FlareControls {
   // Project gaze forward by this many pixels.
   static const double _projectGaze = 60.0;
 
-  String _password = '';
   bool _isCoveringEyes = false;
 
   @override
@@ -117,31 +116,23 @@ class TeddyBearController extends FlareControls {
     _hasFocus = true;
   }
 
-  void setPassword(String value) {
-    _password = value;
-  }
-
   void coverEyes(bool cover) {
-    print("_isCoveringEyes ${_isCoveringEyes}");
-    print("cover ${cover}\n\n");
     if (_isCoveringEyes == cover) {
       return;
     }
     _isCoveringEyes = cover;
     if (cover) {
-      print("handsUp");
       play(TeddyBearGesturesConstants.handsUp);
     } else {
-      print("handsDown");
       play(TeddyBearGesturesConstants.handsDown);
     }
   }
 
-  void submitPassword() {
+  void submitPassword(String password) {
     if (!_isCoveringEyes) {
       play(TeddyBearGesturesConstants.handsUp);
     }
-    if (_password.toLowerCase() == "flutter") {
+    if (password.toLowerCase() == "flutter") {
       play(TeddyBearGesturesConstants.success);
     } else {
       play(TeddyBearGesturesConstants.fail);
