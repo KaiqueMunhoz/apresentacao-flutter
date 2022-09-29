@@ -39,6 +39,7 @@ class AuthenticationForm extends StatelessWidget {
               TrackingTextInput(
                 label: _labelYourPassword,
                 hint: _hintPassword,
+                isObscured: true,
               ),
             ],
           ),

@@ -32,6 +32,7 @@ class CustomTextFormField extends StatelessWidget {
           color: _textFormFieldColor,
         ),
       ),
+      obscureText: obscureText,
     );
   }
 }
