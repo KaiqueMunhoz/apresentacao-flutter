@@ -28,6 +28,7 @@ class TeddyBearController extends FlareControls {
   static const double _projectGaze = 60.0;
 
   String _password = '';
+  bool _isCoveringEyes = false;
 
   @override
   bool advance(FlutterActorArtboard artboard, double elapsed) {
@@ -120,16 +121,18 @@ class TeddyBearController extends FlareControls {
     _password = value;
   }
 
-  bool _isCoveringEyes = false;
-
   void coverEyes(bool cover) {
+    print("_isCoveringEyes ${_isCoveringEyes}");
+    print("cover ${cover}\n\n");
     if (_isCoveringEyes == cover) {
       return;
     }
     _isCoveringEyes = cover;
     if (cover) {
+      print("handsUp");
       play(TeddyBearGesturesConstants.handsUp);
     } else {
+      print("handsDown");
       play(TeddyBearGesturesConstants.handsDown);
     }
   }
@@ -138,7 +141,7 @@ class TeddyBearController extends FlareControls {
     if (!_isCoveringEyes) {
       play(TeddyBearGesturesConstants.handsUp);
     }
-    if (_password.toLowerCase() == "comunidade_flutter") {
+    if (_password.toLowerCase() == "flutter") {
       play(TeddyBearGesturesConstants.success);
     } else {
       play(TeddyBearGesturesConstants.fail);

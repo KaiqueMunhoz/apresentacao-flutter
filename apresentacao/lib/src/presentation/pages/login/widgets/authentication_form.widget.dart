@@ -12,7 +12,7 @@ class AuthenticationForm extends StatelessWidget {
   static const String _labelYourName = 'Digite seu nome';
   static const String _hintName = 'Exemplo: Maria';
   static const String _labelYourPassword = 'Digite sua senha';
-  static const String _hintPassword = 'É uma comunidade';
+  static const String _hintPassword = 'É o tema de hoje';
   static const String _buttonText = 'COMEÇAR APRESENTAÇÃO';
   static const Color _buttonBackgroundColor = Color(0xFF5d8e9b);
 
