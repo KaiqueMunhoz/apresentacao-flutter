@@ -3,7 +3,7 @@ import 'package:apresentacao/src/presentation/pages/login/widgets/tracking_text_
 import 'package:flutter/material.dart';
 
 class AuthenticationForm extends StatelessWidget {
-  static const double _formHeight = 225.0;
+  static const double _formHeight = 290.0;
   static const double _formWidth = 300.0;
   static const double _formBorder = 25.0;
   static const double _formPadding = 30.0;
@@ -13,6 +13,7 @@ class AuthenticationForm extends StatelessWidget {
   static const String _hintName = 'Exemplo: Maria';
   static const String _labelYourPassword = 'Digite sua senha';
   static const String _hintPassword = 'É uma comunidade';
+  static const String _buttonText = 'COMEÇAR APRESENTAÇÃO';
 
   final TeddyBearController teddyBearController;
 
@@ -54,6 +55,11 @@ class AuthenticationForm extends StatelessWidget {
                   teddyBearController.lookAt(caret);
                 },
                 isObscured: true,
+              ),
+              const SizedBox(height: _spaceBetweenWidgets),
+              TextButton(
+                onPressed: () {},
+                child: const Text(_buttonText),
               ),
             ],
           ),
