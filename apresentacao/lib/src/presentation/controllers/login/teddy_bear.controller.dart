@@ -111,7 +111,7 @@ class TeddyBearController extends FlareControls {
       _hasFocus = false;
       return;
     }
-    _caretGlobal[0] = caret.dx;
+    _caretGlobal[0] = caret.dx - 100;
     _caretGlobal[1] = caret.dy;
     _hasFocus = true;
   }
