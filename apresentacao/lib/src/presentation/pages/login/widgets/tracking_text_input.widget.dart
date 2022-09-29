@@ -61,14 +61,11 @@ class _TrackingTextInputState extends State<TrackingTextInput> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 20.0),
-      child: CustomTextFormField(
-        key: _fieldKey,
-        labelText: widget.label,
-        controller: _textController,
-        obscureText: widget.isObscured,
-      ),
+    return CustomTextFormField(
+      key: _fieldKey,
+      labelText: widget.label,
+      controller: _textController,
+      obscureText: widget.isObscured,
     );
   }
 }
