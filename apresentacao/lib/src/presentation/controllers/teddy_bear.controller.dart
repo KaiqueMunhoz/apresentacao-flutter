@@ -4,7 +4,7 @@ import 'dart:ui';
 import 'package:flare_flutter/flare.dart';
 import 'package:flare_flutter/flare_controls.dart';
 
-class TeddyController extends FlareControls {
+class TeddyBearController extends FlareControls {
   // Store a reference to our face control node (the "ctrl_look" node in Flare)
   late ActorNode _faceControl;
 
