@@ -28,6 +28,8 @@ class AuthenticationForm extends StatefulWidget {
 }
 
 class _AuthenticationFormState extends State<AuthenticationForm> {
+  String password = '';
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -60,11 +62,17 @@ class _AuthenticationFormState extends State<AuthenticationForm> {
                   widget.teddyBearController.coverEyes(true);
                   widget.teddyBearController.lookAt(caret);
                 },
+                onTextChanged: (String _password) {
+                  setState(() {
+                    password = _password;
+                  });
+                },
                 isObscured: true,
               ),
               const SizedBox(height: AuthenticationForm._spaceBetweenWidgets),
               ElevatedButton(
-                onPressed: () => widget.teddyBearController.submitPassword(),
+                onPressed: () =>
+                    widget.teddyBearController.submitPassword(password),
                 child: const Text(
                   AuthenticationForm._buttonText,
                 ),
