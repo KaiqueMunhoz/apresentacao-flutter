@@ -134,7 +134,7 @@ class TeddyBearController extends FlareControls {
 
   void submitPassword() {
     play(TeddyBearGesturesConstants.handsUp);
-    if (_password == "bears") {
+    if (_password.toLowerCase() == "comunidade_flutter") {
       play(TeddyBearGesturesConstants.success);
     } else {
       play(TeddyBearGesturesConstants.fail);
