@@ -23,7 +23,7 @@ class Login extends StatelessWidget {
             children: <Widget>[
               SizedBox(height: _paddingTop),
               TeddyBear(controller: _teddyBearController),
-              const AuthenticationForm(),
+              AuthenticationForm(teddyBearController: _teddyBearController),
             ],
           ),
         ),

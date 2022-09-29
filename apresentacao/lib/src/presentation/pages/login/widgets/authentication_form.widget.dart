@@ -1,3 +1,4 @@
+import 'package:apresentacao/src/presentation/controllers/login/teddy_bear.controller.dart';
 import 'package:apresentacao/src/presentation/pages/login/widgets/tracking_text_input.widget.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,12 @@ class AuthenticationForm extends StatelessWidget {
   static const String _labelYourPassword = 'Digite sua senha';
   static const String _hintPassword = 'É uma comunidade';
 
-  const AuthenticationForm({Key? key}) : super(key: key);
+  final TeddyBearController teddyBearController;
+
+  const AuthenticationForm({
+    Key? key,
+    required this.teddyBearController,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
