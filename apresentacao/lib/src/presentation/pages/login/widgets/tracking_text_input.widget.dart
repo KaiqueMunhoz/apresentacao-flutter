@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:apresentacao/src/presentation/pages/login/utils/input_helper.dart';
+import 'package:apresentacao/src/presentation/pages/login/widgets/custom_text_form_field.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -62,15 +63,11 @@ class _TrackingTextInputState extends State<TrackingTextInput> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 20.0),
-      child: TextFormField(
-        decoration: InputDecoration(
-          hintText: widget.hint,
-          labelText: widget.label,
-        ),
+      child: CustomTextFormField(
         key: _fieldKey,
+        labelText: widget.label,
         controller: _textController,
         obscureText: widget.isObscured,
-        validator: (value) {},
       ),
     );
   }
