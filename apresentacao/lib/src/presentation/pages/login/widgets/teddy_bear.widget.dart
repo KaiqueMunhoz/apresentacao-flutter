@@ -9,7 +9,7 @@ class TeddyBear extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TeddyBearController _teddyController = TeddyBearController();
+    TeddyBearController _controller = TeddyBearController();
 
     return Container(
       height: 200,
@@ -19,7 +19,7 @@ class TeddyBear extends StatelessWidget {
         shouldClip: false,
         alignment: Alignment.bottomCenter,
         fit: BoxFit.contain,
-        controller: _teddyController,
+        controller: _controller,
       ),
     );
   }
