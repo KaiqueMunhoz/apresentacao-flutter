@@ -41,6 +41,7 @@ class AuthenticationForm extends StatelessWidget {
                 label: _labelYourName,
                 hint: _hintName,
                 onCaretMoved: (Offset caret) {
+                  teddyBearController.coverEyes(false);
                   teddyBearController.lookAt(caret);
                 },
               ),
@@ -49,6 +50,7 @@ class AuthenticationForm extends StatelessWidget {
                 label: _labelYourPassword,
                 hint: _hintPassword,
                 onCaretMoved: (Offset caret) {
+                  teddyBearController.coverEyes(true);
                   teddyBearController.lookAt(caret);
                 },
                 isObscured: true,
