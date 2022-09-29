@@ -3,7 +3,8 @@ import 'package:apresentacao/src/presentation/pages/login/widgets/teddy_bear.wid
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+  final TeddyBearController _teddyBearController = TeddyBearController();
+  Login({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
