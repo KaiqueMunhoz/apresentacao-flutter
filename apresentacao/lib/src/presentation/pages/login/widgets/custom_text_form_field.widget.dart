@@ -18,6 +18,7 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
       cursorColor: _textFormFieldColor,
       decoration: InputDecoration(
         enabledBorder: const UnderlineInputBorder(
