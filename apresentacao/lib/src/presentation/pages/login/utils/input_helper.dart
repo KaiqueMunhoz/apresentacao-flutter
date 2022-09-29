@@ -24,7 +24,8 @@ List<TextSelectionPoint> globalize(
   }).toList();
 }
 
-Offset? getCaretPosition(RenderBox box) {
+Offset? getCaretPosition(RenderBox? box) {
+  if (box == null) return null;
   final RenderEditable renderEditable = findRenderEditable(box);
   if (!renderEditable.hasFocus) {
     return null;
