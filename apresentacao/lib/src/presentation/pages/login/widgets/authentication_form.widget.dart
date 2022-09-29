@@ -36,13 +36,16 @@ class AuthenticationForm extends StatelessWidget {
         padding: const EdgeInsets.all(_formPadding),
         child: Form(
           child: Column(
-            children: const <Widget>[
+            children: <Widget>[
               TrackingTextInput(
                 label: _labelYourName,
                 hint: _hintName,
+                onCaretMoved: (Offset caret) {
+                  teddyBearController.lookAt(caret);
+                },
               ),
-              SizedBox(height: _spaceBetweenTexts),
-              TrackingTextInput(
+              const SizedBox(height: _spaceBetweenTexts),
+              const TrackingTextInput(
                 label: _labelYourPassword,
                 hint: _hintPassword,
                 isObscured: true,
