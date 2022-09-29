@@ -7,7 +7,7 @@ class AuthenticationForm extends StatelessWidget {
   static const double _formWidth = 300.0;
   static const double _formBorder = 25.0;
   static const double _formPadding = 30.0;
-  static const double _spaceBetweenTexts = 30.0;
+  static const double _spaceBetweenWidgets = 30.0;
 
   static const String _labelYourName = 'Digite seu nome';
   static const String _hintName = 'Exemplo: Maria';
@@ -45,7 +45,7 @@ class AuthenticationForm extends StatelessWidget {
                   teddyBearController.lookAt(caret);
                 },
               ),
-              const SizedBox(height: _spaceBetweenTexts),
+              const SizedBox(height: _spaceBetweenWidgets),
               TrackingTextInput(
                 label: _labelYourPassword,
                 hint: _hintPassword,
