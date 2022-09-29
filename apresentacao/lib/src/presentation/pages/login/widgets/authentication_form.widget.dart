@@ -2,7 +2,7 @@ import 'package:apresentacao/src/presentation/controllers/login/teddy_bear.contr
 import 'package:apresentacao/src/presentation/pages/login/widgets/tracking_text_input.widget.dart';
 import 'package:flutter/material.dart';
 
-class AuthenticationForm extends StatelessWidget {
+class AuthenticationForm extends StatefulWidget {
   static const double _formHeight = 290.0;
   static const double _formWidth = 300.0;
   static const double _formBorder = 25.0;
@@ -24,47 +24,52 @@ class AuthenticationForm extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  State<AuthenticationForm> createState() => _AuthenticationFormState();
+}
+
+class _AuthenticationFormState extends State<AuthenticationForm> {
+  @override
   Widget build(BuildContext context) {
     return Container(
-      height: _formHeight,
-      width: _formWidth,
+      height: AuthenticationForm._formHeight,
+      width: AuthenticationForm._formWidth,
       decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(
-          Radius.circular(_formBorder),
+          Radius.circular(AuthenticationForm._formBorder),
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(_formPadding),
+        padding: const EdgeInsets.all(AuthenticationForm._formPadding),
         child: Form(
           child: Column(
             children: <Widget>[
               TrackingTextInput(
-                label: _labelYourName,
-                hint: _hintName,
+                label: AuthenticationForm._labelYourName,
+                hint: AuthenticationForm._hintName,
                 onCaretMoved: (Offset caret) {
-                  teddyBearController.coverEyes(false);
-                  teddyBearController.lookAt(caret);
+                  widget.teddyBearController.coverEyes(false);
+                  widget.teddyBearController.lookAt(caret);
                 },
               ),
-              const SizedBox(height: _spaceBetweenWidgets),
+              const SizedBox(height: AuthenticationForm._spaceBetweenWidgets),
               TrackingTextInput(
-                label: _labelYourPassword,
-                hint: _hintPassword,
+                label: AuthenticationForm._labelYourPassword,
+                hint: AuthenticationForm._hintPassword,
                 onCaretMoved: (Offset caret) {
-                  teddyBearController.coverEyes(true);
-                  teddyBearController.lookAt(caret);
+                  widget.teddyBearController.coverEyes(true);
+                  widget.teddyBearController.lookAt(caret);
                 },
                 isObscured: true,
               ),
-              const SizedBox(height: _spaceBetweenWidgets),
+              const SizedBox(height: AuthenticationForm._spaceBetweenWidgets),
               ElevatedButton(
-                onPressed: () => teddyBearController.submitPassword(),
+                onPressed: () => widget.teddyBearController.submitPassword(),
                 child: const Text(
-                  _buttonText,
+                  AuthenticationForm._buttonText,
                 ),
                 style: ElevatedButton.styleFrom(
-                  primary: _buttonBackgroundColor,
+                  primary: AuthenticationForm._buttonBackgroundColor,
                   onPrimary: Colors.white,
                 ),
               ),
