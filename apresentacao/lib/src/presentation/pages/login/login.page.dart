@@ -17,16 +17,15 @@ class Login extends StatelessWidget {
     return Scaffold(
       backgroundColor: _backgroundColor,
       body: SingleChildScrollView(
-        padding: EdgeInsets.only(
-          left: _paddingHorizontal,
-          right: _paddingHorizontal,
-          top: _paddingTop,
-        ),
-        child: Column(
-          children: <Widget>[
-            TeddyBear(controller: _teddyBearController),
-            const AuthenticationForm(),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: _paddingHorizontal),
+          child: Column(
+            children: <Widget>[
+              SizedBox(height: _paddingTop),
+              TeddyBear(controller: _teddyBearController),
+              const AuthenticationForm(),
+            ],
+          ),
         ),
       ),
     );
