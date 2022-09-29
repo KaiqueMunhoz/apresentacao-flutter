@@ -27,7 +27,7 @@ class TeddyBearController extends FlareControls {
   // Project gaze forward by this many pixels.
   static const double _projectGaze = 60.0;
 
-  late String _password;
+  String _password = '';
 
   @override
   bool advance(FlutterActorArtboard artboard, double elapsed) {
