@@ -1,3 +1,4 @@
+import 'package:apresentacao/src/features/about_me/presentation/pages/about_me.dart';
 import 'package:apresentacao/src/features/login/presentation/pages/login.page.dart';
 import 'package:flutter/material.dart';
 
@@ -6,9 +7,11 @@ abstract class FlutterBasicsRoutes {
 
   static Map<String, WidgetBuilder> routes = {
     FlutterBasicsRoutesNames.login: (_) => Login(),
+    FlutterBasicsRoutesNames.aboutMe: (_) => const AboutMe(),
   };
 }
 
 abstract class FlutterBasicsRoutesNames {
   static const login = "login";
+  static const aboutMe = "about_me";
 }
