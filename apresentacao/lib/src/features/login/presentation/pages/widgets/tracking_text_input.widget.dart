@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:apresentacao/src/presentation/pages/login/utils/input_helper.dart';
-import 'package:apresentacao/src/presentation/pages/login/widgets/custom_text_form_field.widget.dart';
+import 'package:apresentacao/src/features/login/presentation/pages/utils/input_helper.dart';
+import 'package:apresentacao/src/features/login/presentation/pages/widgets/custom_text_form_field.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 

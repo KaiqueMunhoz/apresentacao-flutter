@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'dart:ui';
 
-import 'package:apresentacao/src/presentation/constants/teddy_bear_gestures.constants.dart';
+import 'package:apresentacao/src/features/login/presentation/constants/teddy_bear_gestures.constants.dart';
 import 'package:flare_flutter/flare.dart';
 import 'package:flare_flutter/flare_controls.dart';
 

@@ -1,6 +1,6 @@
-import 'package:apresentacao/src/presentation/controllers/login/teddy_bear.controller.dart';
-import 'package:apresentacao/src/presentation/pages/login/widgets/authentication_form.widget.dart';
-import 'package:apresentacao/src/presentation/pages/login/widgets/teddy_bear.widget.dart';
+import 'package:apresentacao/src/features/login/presentation/controllers/teddy_bear.controller.dart';
+import 'package:apresentacao/src/features/login/presentation/pages/widgets/authentication_form.widget.dart';
+import 'package:apresentacao/src/features/login/presentation/pages/widgets/teddy_bear.widget.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {

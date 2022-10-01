@@ -1,4 +1,4 @@
-import 'package:apresentacao/src/presentation/controllers/login/teddy_bear.controller.dart';
+import 'package:apresentacao/src/features/login/presentation/controllers/teddy_bear.controller.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 

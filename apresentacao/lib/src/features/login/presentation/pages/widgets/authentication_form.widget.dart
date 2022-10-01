@@ -1,5 +1,5 @@
-import 'package:apresentacao/src/presentation/controllers/login/teddy_bear.controller.dart';
-import 'package:apresentacao/src/presentation/pages/login/widgets/tracking_text_input.widget.dart';
+import 'package:apresentacao/src/features/login/presentation/controllers/teddy_bear.controller.dart';
+import 'package:apresentacao/src/features/login/presentation/pages/widgets/tracking_text_input.widget.dart';
 import 'package:flutter/material.dart';
 
 class AuthenticationForm extends StatefulWidget {
