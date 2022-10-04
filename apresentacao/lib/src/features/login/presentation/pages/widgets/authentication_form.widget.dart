@@ -71,8 +71,7 @@ class _AuthenticationFormState extends State<AuthenticationForm> {
               ),
               const SizedBox(height: AuthenticationForm._spaceBetweenWidgets),
               ElevatedButton(
-                onPressed: () =>
-                    widget.teddyBearController.submitPassword(password),
+                onPressed: _onButtonPressed,
                 child: const Text(
                   AuthenticationForm._buttonText,
                 ),
@@ -86,5 +85,9 @@ class _AuthenticationFormState extends State<AuthenticationForm> {
         ),
       ),
     );
+  }
+
+  Future<void> _onButtonPressed() async {
+    widget.teddyBearController.submitPassword(password);
   }
 }
