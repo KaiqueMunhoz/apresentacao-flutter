@@ -1,5 +1,6 @@
 import 'package:apresentacao/src/features/login/presentation/controllers/teddy_bear.controller.dart';
 import 'package:apresentacao/src/features/login/presentation/pages/widgets/tracking_text_input.widget.dart';
+import 'package:apresentacao/src/flutter_basics.routes.dart';
 import 'package:flutter/material.dart';
 
 class AuthenticationForm extends StatefulWidget {
@@ -89,8 +90,11 @@ class _AuthenticationFormState extends State<AuthenticationForm> {
 
   Future<void> _onButtonPressed() async {
     final bool _isAValidPassword = _hasTheCorrectPassword();
-
     widget.teddyBearController.submitPassword(_isAValidPassword);
+    if (_isAValidPassword) {
+      await Future.delayed(const Duration(milliseconds: 500));
+      Navigator.of(context).pushNamed(FlutterBasicsRoutesNames.aboutMe);
+    }
   }
 
   bool _hasTheCorrectPassword() {
