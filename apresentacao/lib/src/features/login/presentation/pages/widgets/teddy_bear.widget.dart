@@ -3,7 +3,7 @@ import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 
 class TeddyBear extends StatelessWidget {
-  static const String teddyBearAsset = 'assets/Teddy.flr';
+  static const String teddyBearAsset = 'assets/animations/Teddy.flr';
   final TeddyBearController controller;
 
   const TeddyBear({
