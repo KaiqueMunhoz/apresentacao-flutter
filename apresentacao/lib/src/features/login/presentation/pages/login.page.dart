@@ -1,6 +1,7 @@
 import 'package:apresentacao/src/features/login/presentation/controllers/teddy_bear.controller.dart';
 import 'package:apresentacao/src/features/login/presentation/pages/widgets/authentication_form.widget.dart';
 import 'package:apresentacao/src/features/login/presentation/pages/widgets/teddy_bear.widget.dart';
+import 'package:apresentacao/src/features/utils/get_padding_top.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
@@ -12,7 +13,7 @@ class Login extends StatelessWidget {
     const Color _backgroundColor = Color(0xFF5d8e9b);
     const double _paddingHorizontal = 20.0;
 
-    final double _paddingTop = _getPaddingTop(context);
+    final double _paddingTop = getPaddingTop(context);
 
     return Scaffold(
       backgroundColor: _backgroundColor,
@@ -29,12 +30,5 @@ class Login extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  double _getPaddingTop(BuildContext context) {
-    EdgeInsets _devicePadding = MediaQuery.of(context).padding;
-    const double _appBarHeight = 50.0;
-
-    return _devicePadding.top + _appBarHeight;
   }
 }
