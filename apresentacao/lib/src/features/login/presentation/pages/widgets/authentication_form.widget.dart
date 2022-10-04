@@ -88,6 +88,12 @@ class _AuthenticationFormState extends State<AuthenticationForm> {
   }
 
   Future<void> _onButtonPressed() async {
+    final bool _isAPasswordValid = _hasTheCorrectPassword();
+    
     widget.teddyBearController.submitPassword(password);
+  }
+
+  bool _hasTheCorrectPassword() {
+    return password.toLowerCase() == 'flutter';
   }
 }
