@@ -89,8 +89,8 @@ class _AuthenticationFormState extends State<AuthenticationForm> {
 
   Future<void> _onButtonPressed() async {
     final bool _isAPasswordValid = _hasTheCorrectPassword();
-    
-    widget.teddyBearController.submitPassword(password);
+
+    widget.teddyBearController.submitPassword(_isAPasswordValid);
   }
 
   bool _hasTheCorrectPassword() {
