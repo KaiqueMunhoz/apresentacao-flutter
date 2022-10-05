@@ -1,4 +1,4 @@
-import 'package:apresentacao/src/features/about_me/presentation/pages/about_me.dart';
+import 'package:apresentacao/src/features/about_me/presentation/pages/about_me.page.dart';
 import 'package:apresentacao/src/features/login/presentation/pages/login.page.dart';
 import 'package:flutter/material.dart';
 
