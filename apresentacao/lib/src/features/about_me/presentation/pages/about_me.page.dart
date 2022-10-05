@@ -17,8 +17,21 @@ class AboutMe extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: _paddingHorizontal),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              SizedBox(height: _paddingTop),
+              SizedBox(
+                height: _paddingTop,
+                width: double.infinity,
+              ),
+              const CircleAvatar(
+                radius: 55,
+                backgroundColor: Color(0xffFFFFFF),
+                child: CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('assets/images/profile.jpeg'),
+                ),
+              )
             ],
           ),
         ),
