@@ -23,7 +23,11 @@ class _TaskTileState extends State<TaskTile> {
       trailing: Checkbox(
         activeColor: Colors.lightBlueAccent,
         value: _onCheckboxChanged,
-        onChanged: (_) {},
+        onChanged: (value) {
+          setState(() {
+            _onCheckboxChanged = value;
+          });
+        },
       ),
     );
   }
