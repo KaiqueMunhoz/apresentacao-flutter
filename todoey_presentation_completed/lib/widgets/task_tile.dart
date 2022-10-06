@@ -19,6 +19,9 @@ class _TaskTileState extends State<TaskTile> {
     return ListTile(
       title: Text(
         widget.taskTitle,
+        style: TextStyle(
+          decoration: _isCheckboxChecked ? TextDecoration.lineThrough : null,
+        ),
       ),
       trailing: Checkbox(
         activeColor: Colors.lightBlueAccent,
