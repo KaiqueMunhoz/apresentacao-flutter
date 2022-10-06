@@ -14,9 +14,6 @@ class TasksList extends StatelessWidget {
             return TaskTile(
               taskTitle: task.name,
               isChecked: task.isDone,
-              checkboxCallback: (checkboxState) {
-                taskData.updateTask(task);
-              },
               longPressCallback: () {
                 taskData.deleteTask(task);
               },
