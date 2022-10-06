@@ -12,7 +12,7 @@ class TaskTile extends StatefulWidget {
 }
 
 class _TaskTileState extends State<TaskTile> {
-  bool _onCheckboxChanged = false;
+  bool _isCheckboxChecked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +22,10 @@ class _TaskTileState extends State<TaskTile> {
       ),
       trailing: Checkbox(
         activeColor: Colors.lightBlueAccent,
-        value: _onCheckboxChanged,
+        value: _isCheckboxChecked,
         onChanged: (value) {
           setState(() {
-            _onCheckboxChanged = value;
+            _isCheckboxChecked = value;
           });
         },
       ),
