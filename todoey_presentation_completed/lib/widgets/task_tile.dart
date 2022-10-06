@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class TaskTile extends StatelessWidget {
+class TaskTile extends StatefulWidget {
   final String taskTitle;
 
   TaskTile({
@@ -8,14 +8,21 @@ class TaskTile extends StatelessWidget {
   });
 
   @override
+  State<TaskTile> createState() => _TaskTileState();
+}
+
+class _TaskTileState extends State<TaskTile> {
+  bool _onCheckboxChanged = false;
+
+  @override
   Widget build(BuildContext context) {
     return ListTile(
       title: Text(
-        taskTitle,
+        widget.taskTitle,
       ),
       trailing: Checkbox(
         activeColor: Colors.lightBlueAccent,
-        value: false,
+        value: _onCheckboxChanged,
         onChanged: (_) {},
       ),
     );
