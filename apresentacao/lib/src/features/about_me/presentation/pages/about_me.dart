@@ -42,27 +42,14 @@ class _AboutMeState extends State<AboutMe> {
                 )
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                FloatingActionButton(
-                  key: const Key('arrow_back'),
-                  onPressed: () {},
-                  child: const Icon(Icons.arrow_back),
-                  heroTag: null,
-                  backgroundColor: const Color(0xFF62B3AE),
-                ),
-                FloatingActionButton(
-                  key: const Key('arrow_forward'),
-                  onPressed: _addItem,
-                  child: const Icon(Icons.arrow_forward),
-                  heroTag: null,
-                  backgroundColor: const Color(0xFF62B3AE),
-                ),
-              ],
-            )
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        key: const Key('arrow_forward'),
+        onPressed: _addItem,
+        child: const Icon(Icons.arrow_forward),
+        backgroundColor: const Color(0xFF62B3AE),
       ),
     );
   }
