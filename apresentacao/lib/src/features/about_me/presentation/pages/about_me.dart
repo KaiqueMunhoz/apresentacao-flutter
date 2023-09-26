@@ -13,7 +13,7 @@ class AboutMe extends StatefulWidget {
 
 class _AboutMeState extends State<AboutMe> {
   final GlobalKey<AnimatedListState> listKey = GlobalKey<AnimatedListState>();
-  List<Map<String, String>> experiences = [
+  List<Map<String, String>> allExperiences = [
     {'year': '2020/2023', 'company': 'Banco BV', 'tech': 'Flutter'},
     {'year': '2019', 'company': 'Oi', 'tech': 'React-Native | React | Node'},
     {'year': '2018', 'company': 'Banco Pan', 'tech': 'Android Nativo / Kotlin'},
@@ -35,7 +35,7 @@ class _AboutMeState extends State<AboutMe> {
                 const Profile(),
                 Experiences(
                   listKey: listKey,
-                  experiences: experiences,
+                  experiences: allExperiences,
                 )
               ],
             ),
@@ -65,9 +65,9 @@ class _AboutMeState extends State<AboutMe> {
   }
 
   void _addItem() {
-    final int index = experiences.length;
+    final int index = allExperiences.length;
     setState(() {
-      experiences.add({
+      allExperiences.add({
         'year': '2023',
         'company': 'Nova Empresa',
         'tech': 'Tecnologia Nova'
