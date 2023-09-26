@@ -20,6 +20,8 @@ class _AboutMeState extends State<AboutMe> {
     {'year': '2018', 'company': 'Banco Pan', 'tech': 'Android Nativo / Kotlin'},
   ];
 
+  int currentExperience = 1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,13 +68,14 @@ class _AboutMeState extends State<AboutMe> {
   }
 
   void _addItem() {
+    if (currentExperience > 3) {
+      return;
+    }
+
     final int index = experiences.length;
     setState(() {
-      experiences.add({
-        'year': '2023',
-        'company': 'Nova Empresa',
-        'tech': 'Tecnologia Nova'
-      });
+      experiences = allExperiences.sublist(0, currentExperience);
+      currentExperience++;
     });
     listKey.currentState!.insertItem(index);
   }
