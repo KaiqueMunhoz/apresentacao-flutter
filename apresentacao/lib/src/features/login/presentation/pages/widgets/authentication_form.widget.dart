@@ -2,6 +2,8 @@ import 'package:apresentacao/src/features/login/presentation/controllers/teddy_b
 import 'package:apresentacao/src/features/login/presentation/pages/widgets/tracking_text_input.widget.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../flutter_basics.routes.dart';
+
 class AuthenticationForm extends StatefulWidget {
   static const double _formHeight = 290.0;
   static const double _formWidth = 300.0;
@@ -71,8 +73,11 @@ class _AuthenticationFormState extends State<AuthenticationForm> {
               ),
               const SizedBox(height: AuthenticationForm._spaceBetweenWidgets),
               ElevatedButton(
-                onPressed: () =>
-                    widget.teddyBearController.submitPassword(password),
+                onPressed: () {
+                  widget.teddyBearController.submitPassword(password);
+                  Navigator.of(context)
+                      .pushNamed(FlutterBasicsRoutesNames.aboutMe);
+                },
                 child: const Text(
                   AuthenticationForm._buttonText,
                 ),
