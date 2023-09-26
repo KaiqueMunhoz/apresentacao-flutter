@@ -9,7 +9,7 @@ class Experiences extends StatelessWidget {
     {'year': '2018', 'company': 'Banco Pan', 'tech': 'Android Nativo / Kotlin'},
   ];
 
-  Experiences({
+  const Experiences({
     Key? key,
     required this.listKey,
   }) : super(key: key);
