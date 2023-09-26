@@ -8,7 +8,7 @@ class Profile extends StatelessWidget {
     return Row(
       children: const [
         CircleAvatar(
-          radius: 55,
+          radius: 52,
           backgroundColor: Colors.white,
           child: CircleAvatar(
             radius: 50,
