@@ -11,9 +11,6 @@ class FlutterBasicsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: appTitle,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       initialRoute: FlutterBasicsRoutes.initialRoute,
       routes: FlutterBasicsRoutes.routes,
     );
