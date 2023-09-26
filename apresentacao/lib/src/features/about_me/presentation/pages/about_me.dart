@@ -14,7 +14,18 @@ class AboutMe extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(),
+            Column(
+              children: [
+                const SizedBox(height: 100.0),
+                Row(
+                  children: const [
+                    CircleAvatar(),
+                    SizedBox(width: 8),
+                    Text('Kaique Munhoz'),
+                  ],
+                )
+              ],
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
