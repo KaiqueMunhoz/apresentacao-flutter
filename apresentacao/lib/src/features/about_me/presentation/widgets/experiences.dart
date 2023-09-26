@@ -17,17 +17,23 @@ class Experiences extends StatelessWidget {
       shrinkWrap: true,
       initialItemCount: experiences.length,
       itemBuilder: (context, index, animation) {
-        return ListTile(
-          title: Text(
-            '${experiences[index]['year']} - ${experiences[index]['company']}',
-            style: const TextStyle(
-              color: Colors.white,
+        return SlideTransition(
+          position: animation.drive(Tween<Offset>(
+            begin: const Offset(1, 0),
+            end: const Offset(0, 0),
+          )),
+          child: ListTile(
+            title: Text(
+              '${experiences[index]['year']} - ${experiences[index]['company']}',
+              style: const TextStyle(
+                color: Colors.white,
+              ),
             ),
-          ),
-          subtitle: Text(
-            '${experiences[index]['tech']}',
-            style: const TextStyle(
-              color: Colors.white,
+            subtitle: Text(
+              '${experiences[index]['tech']}',
+              style: const TextStyle(
+                color: Colors.white,
+              ),
             ),
           ),
         );
