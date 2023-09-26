@@ -20,9 +20,13 @@ class AboutMe extends StatelessWidget {
                 Row(
                   children: const [
                     CircleAvatar(
-                      minRadius: 50,
-                      backgroundImage: AssetImage(
-                        'assets/images/kaique_munhoz_profile.jpeg',
+                      radius: 55,
+                      backgroundColor: Colors.white,
+                      child: CircleAvatar(
+                        radius: 50,
+                        backgroundImage: AssetImage(
+                          'assets/images/kaique_munhoz_profile.jpeg',
+                        ),
                       ),
                     ),
                     SizedBox(width: 16),
