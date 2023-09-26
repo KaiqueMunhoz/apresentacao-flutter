@@ -21,6 +21,9 @@ class AboutMe extends StatelessWidget {
                   children: const [
                     CircleAvatar(
                       minRadius: 50,
+                      backgroundImage: AssetImage(
+                        'assets/images/kaique_munhoz_profile.jpeg',
+                      ),
                     ),
                     SizedBox(width: 16),
                     Text(
