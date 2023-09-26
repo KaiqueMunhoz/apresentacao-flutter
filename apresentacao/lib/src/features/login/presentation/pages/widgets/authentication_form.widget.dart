@@ -74,9 +74,12 @@ class _AuthenticationFormState extends State<AuthenticationForm> {
               const SizedBox(height: AuthenticationForm._spaceBetweenWidgets),
               ElevatedButton(
                 onPressed: () {
-                  widget.teddyBearController.submitPassword(password);
-                  Navigator.of(context)
-                      .pushNamed(FlutterBasicsRoutesNames.aboutMe);
+                  final isPasswordCorrect =
+                      widget.teddyBearController.submitPassword(password);
+                  if (isPasswordCorrect) {
+                    Navigator.of(context)
+                        .pushNamed(FlutterBasicsRoutesNames.aboutMe);
+                  }
                 },
                 child: const Text(
                   AuthenticationForm._buttonText,

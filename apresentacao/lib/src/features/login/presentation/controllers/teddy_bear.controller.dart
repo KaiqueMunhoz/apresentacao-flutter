@@ -128,14 +128,16 @@ class TeddyBearController extends FlareControls {
     }
   }
 
-  void submitPassword(String password) {
+  bool submitPassword(String password) {
     if (_isCoveringEyes) {
       play(TeddyBearGesturesConstants.handsDown);
     }
-    if (password.toLowerCase() == "flutter") {
+    final bool isPasswordCorrect = password.toLowerCase() == "flutter";
+    if (isPasswordCorrect) {
       play(TeddyBearGesturesConstants.success);
     } else {
       play(TeddyBearGesturesConstants.fail);
     }
+    return isPasswordCorrect;
   }
 }
