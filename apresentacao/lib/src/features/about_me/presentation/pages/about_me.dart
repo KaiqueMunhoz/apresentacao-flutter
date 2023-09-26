@@ -19,9 +19,17 @@ class AboutMe extends StatelessWidget {
                 const SizedBox(height: 100.0),
                 Row(
                   children: const [
-                    CircleAvatar(),
-                    SizedBox(width: 8),
-                    Text('Kaique Munhoz'),
+                    CircleAvatar(
+                      minRadius: 50,
+                    ),
+                    SizedBox(width: 16),
+                    Text(
+                      'Kaique Munhoz',
+                      style: TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.white,
+                      ),
+                    ),
                   ],
                 )
               ],
