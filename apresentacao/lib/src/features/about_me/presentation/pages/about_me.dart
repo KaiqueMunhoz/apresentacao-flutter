@@ -1,3 +1,4 @@
+import 'package:apresentacao/src/features/about_me/presentation/widgets/profile.dart';
 import 'package:flutter/material.dart';
 
 class AboutMe extends StatelessWidget {
@@ -15,31 +16,9 @@ class AboutMe extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Column(
-              children: [
-                const SizedBox(height: 100.0),
-                Row(
-                  children: const [
-                    CircleAvatar(
-                      radius: 55,
-                      backgroundColor: Colors.white,
-                      child: CircleAvatar(
-                        radius: 50,
-                        backgroundImage: AssetImage(
-                          'assets/images/kaique_munhoz_profile.jpeg',
-                        ),
-                      ),
-                    ),
-                    SizedBox(width: 16),
-                    Text(
-                      'Kaique Munhoz',
-                      style: TextStyle(
-                        fontFamily: 'RobotoCondensed',
-                        fontSize: 30.0,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
-                )
+              children: const [
+                SizedBox(height: 100.0),
+                Profile(),
               ],
             ),
             Row(
