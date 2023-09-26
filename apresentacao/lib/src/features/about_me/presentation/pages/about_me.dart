@@ -36,10 +36,27 @@ class _AboutMeState extends State<AboutMe> {
               children: [
                 const SizedBox(height: 100.0),
                 const Profile(),
+                const SizedBox(height: 16.0),
+                const SizedBox(
+                  width: double.infinity,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    child: Text(
+                      '- Especialista Mobile\n- Líder dos profissionais da Accenture que atuam na tribo de veículos',
+                      style: TextStyle(
+                        fontFamily: 'RobotoCondensed',
+                        fontWeight: FontWeight.w300,
+                        fontSize: 20.0,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 16.0),
                 Experiences(
                   listKey: listKey,
                   experiences: experiences,
-                )
+                ),
               ],
             ),
           ],
