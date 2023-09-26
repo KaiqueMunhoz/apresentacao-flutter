@@ -26,6 +26,7 @@ class AboutMe extends StatelessWidget {
                     Text(
                       'Kaique Munhoz',
                       style: TextStyle(
+                        fontFamily: 'RobotoCondensed',
                         fontSize: 30.0,
                         color: Colors.white,
                       ),
