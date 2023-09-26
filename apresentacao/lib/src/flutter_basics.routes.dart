@@ -7,7 +7,7 @@ abstract class FlutterBasicsRoutes {
 
   static Map<String, WidgetBuilder> routes = {
     FlutterBasicsRoutesNames.login: (_) => Login(),
-    FlutterBasicsRoutesNames.aboutMe: (_) => const AboutMe(),
+    FlutterBasicsRoutesNames.aboutMe: (_) => AboutMe(),
   };
 }
 
