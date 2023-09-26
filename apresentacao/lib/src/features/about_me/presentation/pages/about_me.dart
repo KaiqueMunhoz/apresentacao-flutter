@@ -23,12 +23,14 @@ class AboutMe extends StatelessWidget {
                   onPressed: () {},
                   child: const Icon(Icons.arrow_back),
                   heroTag: null,
+                  backgroundColor: const Color(0xFF62B3AE),
                 ),
                 FloatingActionButton(
                   key: const Key('arrow_forward'),
                   onPressed: () {},
                   child: const Icon(Icons.arrow_forward),
                   heroTag: null,
+                  backgroundColor: const Color(0xFF62B3AE),
                 ),
               ],
             )
