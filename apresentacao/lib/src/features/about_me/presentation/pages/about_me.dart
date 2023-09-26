@@ -3,9 +3,10 @@ import 'package:apresentacao/src/features/about_me/presentation/widgets/profile.
 import 'package:flutter/material.dart';
 
 class AboutMe extends StatelessWidget {
+  final GlobalKey<AnimatedListState> listKey = GlobalKey<AnimatedListState>();
   static const Color _backgroundColor = Color(0xFF5d8e9b);
 
-  const AboutMe({Key? key}) : super(key: key);
+  AboutMe({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class AboutMe extends StatelessWidget {
               children: [
                 const SizedBox(height: 100.0),
                 const Profile(),
-                Experiences(),
+                Experiences(listKey: listKey)
               ],
             ),
             Row(

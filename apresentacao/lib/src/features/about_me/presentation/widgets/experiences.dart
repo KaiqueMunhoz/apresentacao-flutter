@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
 
 class Experiences extends StatelessWidget {
-  final GlobalKey<AnimatedListState> _listKey = GlobalKey<AnimatedListState>();
+  final GlobalKey<AnimatedListState> listKey;
+
   static const List<Map<String, String>> experiences = [
     {'year': '2020/2023', 'company': 'Banco BV', 'tech': 'Flutter'},
     {'year': '2019', 'company': 'Oi', 'tech': 'React-Native | React | Node'},
     {'year': '2018', 'company': 'Banco Pan', 'tech': 'Android Nativo / Kotlin'},
   ];
 
-  Experiences({Key? key}) : super(key: key);
+  Experiences({
+    Key? key,
+    required this.listKey,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AnimatedList(
-      key: _listKey,
+      key: listKey,
       shrinkWrap: true,
       initialItemCount: experiences.length,
       itemBuilder: (context, index, animation) {
