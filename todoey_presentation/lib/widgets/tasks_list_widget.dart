@@ -17,7 +17,9 @@ class TasksListWidget extends StatelessWidget {
         ),
         child: ListView(
           children: const [
-            TaskWidget(),
+            TaskWidget(title: 'Tarefa 1'),
+            TaskWidget(title: 'Tarefa 2'),
+            TaskWidget(title: 'Tarefa 3'),
           ],
         ),
       ),
