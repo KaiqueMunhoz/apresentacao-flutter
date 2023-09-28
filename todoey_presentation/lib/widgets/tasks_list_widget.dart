@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:todoey_presentation/widgets/task_widget.dart';
 
 class TasksListWidget extends StatelessWidget {
+  static const List<String> tasks = [
+    'Tarefa 1',
+    'Tarefa 2',
+    'Tarefa 3',
+  ];
+
   const TasksListWidget({Key? key}) : super(key: key);
 
   @override
@@ -16,11 +22,11 @@ class TasksListWidget extends StatelessWidget {
           ),
         ),
         child: ListView(
-          children: const [
-            TaskWidget(title: 'Tarefa 1'),
-            TaskWidget(title: 'Tarefa 2'),
-            TaskWidget(title: 'Tarefa 3'),
-          ],
+          children: tasks
+              .map(
+                (task) => TaskWidget(title: task),
+              )
+              .toList(),
         ),
       ),
     );
