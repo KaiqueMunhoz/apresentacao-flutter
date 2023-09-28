@@ -18,8 +18,8 @@ class TasksScreen extends StatelessWidget {
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const CircleAvatar(
+              children: const [
+                CircleAvatar(
                   backgroundColor: Colors.white,
                   radius: 30,
                   child: Icon(
@@ -28,8 +28,8 @@ class TasksScreen extends StatelessWidget {
                     color: Colors.lightBlue,
                   ),
                 ),
-                const SizedBox(height: 10.0),
-                const Text(
+                SizedBox(height: 10.0),
+                Text(
                   'Todoey',
                   style: TextStyle(
                     color: Colors.white,
@@ -37,7 +37,7 @@ class TasksScreen extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const Text(
+                Text(
                   '12 tasks',
                   style: TextStyle(
                     color: Colors.white,
