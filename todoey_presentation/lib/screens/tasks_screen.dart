@@ -5,8 +5,14 @@ class TasksScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.lightBlue,
+      body: Column(
+        children: const [
+          Icon(Icons.list),
+          Text('Todoey'),
+        ],
+      ),
     );
   }
 }
