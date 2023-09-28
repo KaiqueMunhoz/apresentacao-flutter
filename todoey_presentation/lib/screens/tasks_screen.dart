@@ -21,6 +21,7 @@ class TasksScreen extends StatelessWidget {
               radius: 30,
               child: Icon(
                 Icons.list,
+                size: 30.0,
               ),
             ),
             Text('Todoey'),
