@@ -16,7 +16,11 @@ class TasksScreen extends StatelessWidget {
         ),
         child: Column(
           children: const [
-            Icon(Icons.list),
+            CircleAvatar(
+              child: Icon(
+                Icons.list,
+              ),
+            ),
             Text('Todoey'),
           ],
         ),
