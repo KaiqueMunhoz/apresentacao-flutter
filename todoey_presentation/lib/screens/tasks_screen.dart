@@ -57,6 +57,20 @@ class TasksScreen extends StatelessWidget {
                   topRight: Radius.circular(20.0),
                 ),
               ),
+              child: ListView(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: ListTile(
+                      title: Text('Texto'),
+                      trailing: Checkbox(
+                        value: false,
+                        onChanged: (_) {},
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
           )
         ],
