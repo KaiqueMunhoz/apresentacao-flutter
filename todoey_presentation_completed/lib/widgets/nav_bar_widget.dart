@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:todoey_presentation/widgets/texts/heading1.dart';
 
 class NavBarWidget extends StatelessWidget {
+  static const double space = 30.0;
+  static const double iconAndCicleAvatarSize = 30.0;
+
   final List<String> tasks;
 
   const NavBarWidget({
@@ -13,31 +17,24 @@ class NavBarWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(
         top: 60.0,
-        right: 30.0,
-        bottom: 30.0,
-        left: 30.0,
+        right: space,
+        bottom: space,
+        left: space,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const CircleAvatar(
             backgroundColor: Colors.white,
-            radius: 30,
+            radius: iconAndCicleAvatarSize,
             child: Icon(
               Icons.list,
-              size: 30.0,
+              size: iconAndCicleAvatarSize,
               color: Colors.lightBlue,
             ),
           ),
           const SizedBox(height: 10.0),
-          const Text(
-            'Todoey',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 60.0,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
+          const Heading1(),
           Text(
             '${tasks.length} tasks',
             style: const TextStyle(

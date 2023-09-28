@@ -24,7 +24,25 @@ class TasksScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          // showModalBottomSheet(
+          //   context: context,
+          //   builder: (_) {
+          //     return Column(
+          //       children: [
+          //         const Text('Add Task'),
+          //         const SizedBox(height: 10.0),
+          //         const TextField(),
+          //         const SizedBox(height: 10.0),
+          //         ElevatedButton(
+          //           onPressed: () {},
+          //           child: Text('Add'),
+          //         )
+          //       ],
+          //     );
+          //   },
+          // );
+        },
         child: const Icon(Icons.add),
         backgroundColor: Colors.lightBlue,
       ),
