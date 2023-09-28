@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:todoey_presentation/widgets/task_widget.dart';
 
 class TasksListWidget extends StatelessWidget {
-  static const List<String> tasks = [
-    'Tarefa 1',
-    'Tarefa 2',
-    'Tarefa 3',
-  ];
+  final List<String> tasks;
 
-  const TasksListWidget({Key? key}) : super(key: key);
+  const TasksListWidget({
+    Key? key,
+    required this.tasks,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class NavBarWidget extends StatelessWidget {
-  const NavBarWidget({Key? key}) : super(key: key);
+  final List<String> tasks;
+
+  const NavBarWidget({
+    Key? key,
+    required this.tasks,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +19,8 @@ class NavBarWidget extends StatelessWidget {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-          CircleAvatar(
+        children: [
+          const CircleAvatar(
             backgroundColor: Colors.white,
             radius: 30,
             child: Icon(
@@ -24,8 +29,8 @@ class NavBarWidget extends StatelessWidget {
               color: Colors.lightBlue,
             ),
           ),
-          SizedBox(height: 10.0),
-          Text(
+          const SizedBox(height: 10.0),
+          const Text(
             'Todoey',
             style: TextStyle(
               color: Colors.white,
@@ -34,8 +39,8 @@ class NavBarWidget extends StatelessWidget {
             ),
           ),
           Text(
-            '12 tasks',
-            style: TextStyle(
+            '${tasks.length} tasks',
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 18.0,
             ),
